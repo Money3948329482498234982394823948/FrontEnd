@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <link rel="stylesheet" href="Select.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택 페이지</title>
+</head>
+<body>
+    <h1>유튜브와 둠 중 원하는 것을 고르시오</h1>
+    <form>
+        <button onclick="SeletY()"><img src="YouTube.png" alt="유튜브" height="500px" width="350px"></button>
+        <button onclick="SeletD()"><img src="Doom.png" alt="둠" height="500px" width="350px"></button>
+    </form>
+    <script>
+        var doom=0, YouTube=0
+        function SeletD(){
+            doom+=1
+            console.log(doom);
+            
+        }
+        function SeletY(){
+            YouTube+=1
+        }
+    </script>
+</body>
+</html>
