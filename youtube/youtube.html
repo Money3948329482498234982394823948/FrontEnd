@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 링크 설정</title>
+    <link rel="stylesheet" href="youtube.css">
+</head>
+<body>
+    <!-- 우측 상단 딴짓 화면: 유튜브 링크 설정 -->
+    <div class="yt-box">
+        <form class="yt-form" id="yt-form">
+            <input type="text" id="yt-input" placeholder="유튜브 링크를 붙여넣으세요">
+            <button type="submit">재생</button>
+        </form>
+        <p class="yt-error" id="yt-error"></p>
+        <div class="yt-player" id="yt-player">
+            <p class="yt-empty">링크를 입력하면 여기서 재생됩니다</p>
+        </div>
+    </div>
+
+    <script src="youtube.js"></script>
+</body>
+</html>
