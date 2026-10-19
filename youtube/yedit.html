@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>유튜브 주소 입력</title>
+    <link rel="stylesheet" href="yedit.css">
+</head>
+<body>
+    <!-- 좌측 상단 광고의 X를 누르면 열리는 유튜브 주소 입력 화면 (가운데 영역) -->
+    <div class="mainBox">
+        <form class="yedit-container" id="yedit-form">
+            <h1>유튜브 주소를 입력하시오</h1>
+            <input type="text" class="yedit-input" id="yedit-input">
+            <p class="yedit-error" id="yedit-error"></p>
+            <div class="yedit-submitBox">
+                <button type="button" id="yedit-cancel">취소하기</button>
+                <button type="submit">입력하기</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="yedit.js"></script>
+</body>
+</html>
