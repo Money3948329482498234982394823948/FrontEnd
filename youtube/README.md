@@ -15,7 +15,7 @@
 2. 유튜브 링크를 넣고 **입력하기**를 누르면 링크를 저장(`localStorage`의 `ytLink`)하고 `youtube.html`로 이동합니다.
    - 유튜브 링크가 아니면 "올바른 유튜브 링크가 아닙니다"가 뜹니다.
    - **취소하기**를 누르면 이전 화면으로 돌아갑니다.
-3. `youtube.html`은 저장된 링크를 읽어서 우측 상단 박스에서 영상을 재생합니다. 박스 안에서 링크를 바로 바꿀 수도 있습니다.
+3. `youtube.html`은 저장된 링크를 읽어서 우측 상단 박스에서 영상만 재생합니다. 링크를 바꾸려면 박스 오른쪽 위의 X를 눌러 `yedit.html`에서 다시 입력합니다.
 
 지원하는 링크 형식: `youtube.com/watch?v=`, `youtu.be/`, `youtube.com/shorts/`, `youtube.com/embed/`
 

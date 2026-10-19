@@ -7,16 +7,12 @@
     <link rel="stylesheet" href="youtube.css">
 </head>
 <body>
-    <!-- 우측 상단 딴짓 화면: 유튜브 링크 설정 -->
+    <!-- 우측 상단 딴짓 화면: 영상만 재생, 링크는 X를 눌러 yedit.html에서 입력 -->
     <div class="yt-box">
-        <form class="yt-form" id="yt-form">
-            <input type="text" id="yt-input" placeholder="유튜브 링크를 붙여넣으세요">
-            <button type="submit">재생</button>
-        </form>
-        <p class="yt-error" id="yt-error"></p>
         <div class="yt-player" id="yt-player">
-            <p class="yt-empty">링크를 입력하면 여기서 재생됩니다</p>
+            <p class="yt-empty">X를 눌러 유튜브 링크를 입력하세요</p>
         </div>
+        <a class="yt-x" href="yedit.html">X</a>
     </div>
 
     <script src="youtube.js"></script>
