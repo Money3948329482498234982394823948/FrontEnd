@@ -1,4 +1,8 @@
+/* 화면 우측 상단에 고정 */
 .yt-box {
+    position: fixed;
+    top: 10px;
+    right: 10px;
     width: 360px;
     padding: 8px;
     border: 1px solid #ccc;
