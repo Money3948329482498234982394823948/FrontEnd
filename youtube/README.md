@@ -31,3 +31,7 @@ HTML 파일을 더블클릭(`file://`)으로 열면 유튜브 영상이 재생�
 - 광고 X 버튼이 `youtube/yedit.html`로 이동하도록 연결합니다.
 - 메인 페이지로 돌아가야 하면 `yedit.js`의 `location.href = 'youtube.html'`을 메인 페이지 주소로 바꿉니다.
 - 메인 페이지의 우측 상단 칸에 `.yt-box`를 넣고 `youtube.css`, `youtube.js`를 연결합니다.
+
+---
+
+당신의 어머니
