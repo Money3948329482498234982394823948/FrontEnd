@@ -1,0 +1,48 @@
+body {
+    margin: 0;
+}
+
+.mainBox {
+    width: 783px;
+    height: 100vh;
+    margin: 0 auto;
+    border: 1px solid rgba(111, 111, 111, 0.325);
+    box-sizing: border-box;
+}
+
+.yedit-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.yedit-container h1 {
+    margin: 40px 0 240px;
+    font-size: 32px;
+}
+
+.yedit-input {
+    width: 530px;
+    height: 40px;
+    padding: 0 4px;
+    font-size: 17px;
+    box-sizing: border-box;
+}
+
+.yedit-error {
+    margin: 8px 0 0;
+    min-height: 20px;
+    color: #e62117;
+}
+
+.yedit-submitBox {
+    display: flex;
+    gap: 24px;
+    margin-top: 22px;
+}
+
+.yedit-submitBox button {
+    width: 140px;
+    height: 40px;
+    cursor: pointer;
+}
