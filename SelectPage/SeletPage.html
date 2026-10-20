@@ -7,6 +7,10 @@
     <title>선택 페이지</title>
 </head>
 <body>
+    <div class="aBox">
+        <a href="/SelectPage/SeletPage.html">1</a>
+        <a href="/fakeWebPage/fakewebpage.html">2</a>
+    </div>
     <h1>유튜브와 둠 중 원하는 것을 고르시오</h1>
     <form>
         <button id="youtubeBtn"><img src="/SelectPage/YouTube.png" alt="유튜브" height="500px" width="350px"></button>
@@ -15,6 +19,15 @@
     <script>
         const youtubeBtn = document.querySelector('#youtubeBtn');
         const doomBtn = document.querySelector('#doomBtn');
+
+        if (localStorage.getItem('Selected') === "doom"){
+            youtubeBtn.style.border = "1px solid black";
+            doomBtn.style.border = "2px solid red";
+        }
+        else {
+            youtubeBtn.style.border = "1px solid red";
+            doomBtn.style.border = "2px solid black";
+        }
 
         youtubeBtn.addEventListener('click', (e) => {
             e.preventDefault();
@@ -27,11 +40,13 @@
 
         function SeletD(){
             localStorage.setItem('Selected', "doom");
-            window.location.href = "../index.html";
+            youtubeBtn.style.border = "1px solid black";
+            doomBtn.style.border = "2px solid red";
         }
         function SeletY(){
             localStorage.setItem('Selected', "youtube");
-            window.location.href = "../index.html";
+            youtubeBtn.style.border = "2px solid red";
+            doomBtn.style.border = "1px solid black";
         }
     </script>
 </body>
