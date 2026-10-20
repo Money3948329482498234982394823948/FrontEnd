@@ -18,6 +18,12 @@
     border-right: 1px solid rgba(128, 128, 128, 0.514);
 }
 
+.home-main.absolute-main {
+    width: 100vw;
+    height: 100vh;
+    flex: 0 0 100vw;
+}
+
 .home-side {
     width: 22vw;
     height: 100%;
@@ -26,6 +32,20 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+
+.home-side.absolute {
+    position: fixed;
+    top: 0;
+    z-index: 2;
+}
+
+.home-leftSide.absolute {
+    left: 0;
+}
+
+.home-rightSide.absolute {
+    right: 0;
 }
 
 .home-leftSide {
@@ -102,4 +122,12 @@
     overflow: hidden;
     width: 45rem;
     height: 30rem;
+}
+
+iframe {
+    border: none;
+}
+
+body {
+    overflow: hidden;
 }

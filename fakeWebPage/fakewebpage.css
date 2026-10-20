@@ -1,7 +1,11 @@
 /* 이 파일은 가짜 웹사이트 설정 화면의 스타일만 담당합니다. */
 * { box-sizing: border-box; }
 body { margin: 0; font-family: Arial, 'Malgun Gothic', sans-serif; color: #111; background: #fff; }
-
+* {
+    padding: 0px;
+    box-sizing: border-box;
+    margin: 0px;
+}
 .content-edit {
   width: 51%;
   min-height: 100vh;
@@ -75,6 +79,17 @@ body { margin: 0; font-family: Arial, 'Malgun Gothic', sans-serif; color: #111; 
 .aBox > a {
     padding: 1rem;
     border: 1px solid black;
+    color: black;
+    text-decoration: none;
+}
+
+.back {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    font-size: 24px;
+    font-weight: 500;
+    cursor: pointer;
     color: black;
     text-decoration: none;
 }

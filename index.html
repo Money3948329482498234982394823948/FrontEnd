@@ -58,12 +58,13 @@
         const Selected = localStorage.getItem('Selected');
         const contentLink = localStorage.getItem('contentLink');
         const isAbsolute = localStorage.getItem('isAbsolute');
+        const ytLink = localStorage.getItem('ytLink');
         
         const youtubeFrame = document.querySelector('#home-youtube');
         const doomFrame = document.querySelector('#home-doom');
         const rightSide = document.querySelector('.home-rightSide');
         const mainIframe = document.querySelector('#home-mainIframe');
-        const homeSide = document.querySelector('.home-side');
+        const homeSides = document.querySelectorAll('.home-side');
 
         if(Selected === "doom") {
             rightSide.classList.add('doom-selected');
@@ -76,10 +77,11 @@
         }
 
         mainIframe.src = contentLink;
+        youtubeFrame.src = ytLink;
 
-        if(isAbsolute) {
-            homeSide[0].classList.add('absolute');
-            homeSide[1].classList.add('absolute');
+        if (isAbsolute === 'true') {
+            homeSides.forEach(side => side.classList.add('absolute'));
+            document.querySelector('.home-main').classList.add('absolute-main');
         }
     </script>
 </body>

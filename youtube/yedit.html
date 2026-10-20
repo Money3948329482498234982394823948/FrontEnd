@@ -7,6 +7,13 @@
     <link rel="stylesheet" href="yedit.css">
 </head>
 <body>
+
+    <div class="aBox">
+        <a href="/SelectPage/SeletPage.html">1</a>
+        <a href="/fakeWebPage/fakewebpage.html">2</a>
+        <a href="/youtube/yedit.html">3</a>
+    </div>
+
     <!-- 좌측 상단 광고의 X를 누르면 열리는 유튜브 주소 입력 화면 (가운데 영역) -->
     <div class="mainBox">
         <form class="yedit-container" id="yedit-form">
@@ -14,11 +21,14 @@
             <input type="text" class="yedit-input" id="yedit-input">
             <p class="yedit-error" id="yedit-error"></p>
             <div class="yedit-submitBox">
-                <button type="button" id="yedit-cancel">취소하기</button>
                 <button type="submit">입력하기</button>
             </div>
         </form>
     </div>
+
+    <a class="back" href="../index.html">
+        <- 돌아가기
+    </a>
 
     <script src="yedit.js"></script>
 </body>
