@@ -7,7 +7,6 @@ const MAIN_PAGE = '';
 const form = document.querySelector('#content-edit-form');
 const input = document.querySelector('#Content-input');
 const checkbox = document.querySelector('#absoluteCheck');
-const cancelButton = document.querySelector('#Content-cancel');
 const message = document.querySelector('#content-edit-message');
 
 function loadSavedSettings() {
@@ -61,12 +60,6 @@ form.addEventListener('submit', (event) => {
     detail: { contentLink, isAbsolute }
   }));
 
-  returnToMain();
-});
-
-cancelButton.addEventListener('click', () => {
-  loadSavedSettings();
-  message.textContent = '변경 사항을 취소했습니다.';
   returnToMain();
 });
 

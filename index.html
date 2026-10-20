@@ -15,7 +15,7 @@
             <div class="home-ajdBox">
                 <img src="img/ajd.png">
                 <div class="mr-X">X</div>
-            </div>
+            </div>  
 
             <div class="home-churchBox">
                 <img src="img/church.png">
@@ -23,7 +23,12 @@
             </div>
         </div>
         <div class="home-main">
-            
+            <iframe
+                src=""
+                width="100%"
+                height="100%"
+                id="home-mainIframe">
+            </iframe>
         </div>
         <div class="home-rightSide home-side">
             <iframe 
@@ -51,10 +56,14 @@
 
     <script>
         const Selected = localStorage.getItem('Selected');
+        const contentLink = localStorage.getItem('contentLink');
+        const isAbsolute = localStorage.getItem('isAbsolute');
         
         const youtubeFrame = document.querySelector('#home-youtube');
         const doomFrame = document.querySelector('#home-doom');
         const rightSide = document.querySelector('.home-rightSide');
+        const mainIframe = document.querySelector('#home-mainIframe');
+        const homeSide = document.querySelector('.home-side');
 
         if(Selected === "doom") {
             rightSide.classList.add('doom-selected');
@@ -64,6 +73,13 @@
         else {
             youtubeFrame.style.display = "inline-block";
             doomFrame.style.display = "none";
+        }
+
+        mainIframe.src = contentLink;
+
+        if(isAbsolute) {
+            homeSide[0].classList.add('absolute');
+            homeSide[1].classList.add('absolute');
         }
     </script>
 </body>
