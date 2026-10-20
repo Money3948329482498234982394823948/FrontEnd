@@ -8,27 +8,63 @@
 </head>
 <body>
     <div class="home-container">
+
+        <a href="SelectPage/SeletPage.html" class="home-btn"></a>
+
         <div class="home-leftSide home-side">
             <div class="home-ajdBox">
                 <img src="img/ajd.png">
+                <div class="mr-X">X</div>
             </div>
 
             <div class="home-churchBox">
                 <img src="img/church.png">
+                <div class="mr-X">X</div>
             </div>
         </div>
         <div class="home-main">
             
         </div>
         <div class="home-rightSide home-side">
-            <div class="home-youtube">
-
-            </div>
+            <iframe 
+                src="https://youtu.be/xM-6h3wfiAI?si=paUGnRg97ozzfGrE"
+                title="YouTube video player" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen
+                id="home-youtube">
+            </iframe>
+            <iframe 
+                src="https://js-dos.com/games/doom.exe.html" 
+                width="1780" height="900" 
+                framemborder="0" scrolling="yes" 
+                allowfullscreen
+                id="home-doom">
+            </iframe>
             
             <div class="home-copang">
                 <img src="img/copang.png">
+                <div class="mr-X">X</div>
             </div>
         </div>
     </div>
+
+    <script>
+        const Selected = localStorage.getItem('Selected');
+        
+        const youtubeFrame = document.querySelector('#home-youtube');
+        const doomFrame = document.querySelector('#home-doom');
+        const rightSide = document.querySelector('.home-rightSide');
+
+        if(Selected === "doom") {
+            rightSide.classList.add('doom-selected');
+            doomFrame.style.display = "inline-block";
+            youtubeFrame.style.display = "none";
+        }
+        else {
+            youtubeFrame.style.display = "inline-block";
+            doomFrame.style.display = "none";
+        }
+    </script>
 </body>
 </html>

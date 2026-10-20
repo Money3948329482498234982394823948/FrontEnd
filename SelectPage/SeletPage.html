@@ -9,18 +9,29 @@
 <body>
     <h1>유튜브와 둠 중 원하는 것을 고르시오</h1>
     <form>
-        <button onclick="SeletY()"><img src="/SelectPage/YouTube.png" alt="유튜브" height="500px" width="350px"></button>
-        <button onclick="SeletD()"><img src="/SelectPage/Doom.png" alt="둠" height="500px" width="350px"></button>
+        <button id="youtubeBtn"><img src="/SelectPage/YouTube.png" alt="유튜브" height="500px" width="350px"></button>
+        <button id="doomBtn"><img src="/SelectPage/Doom.png" alt="둠" height="500px" width="350px"></button>
     </form>
     <script>
-        var doom=0, YouTube=0
+        const youtubeBtn = document.querySelector('#youtubeBtn');
+        const doomBtn = document.querySelector('#doomBtn');
+
+        youtubeBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            SeletY();
+        });
+        doomBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            SeletD();
+        });
+
         function SeletD(){
-            doom+=1
-            console.log(doom);
-            
+            localStorage.setItem('Selected', "doom");
+            window.location.href = "../index.html";
         }
         function SeletY(){
-            YouTube+=1
+            localStorage.setItem('Selected', "youtube");
+            window.location.href = "../index.html";
         }
     </script>
 </body>

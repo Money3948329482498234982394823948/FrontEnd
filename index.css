@@ -6,7 +6,7 @@
 
 
 .home-container {
-    width: 100vw;
+    width: 100%;
     height: 100vh;
     display: flex;
 }
@@ -33,6 +33,7 @@
 }
     .home-ajdBox {
         width: 83%;
+        position: relative;
     }
     .home-ajdBox > img {
         width: 100%;
@@ -40,6 +41,7 @@
 
     .home-churchBox {
         width: 82%;
+        position: relative;
     }
     .home-churchBox > img {
         width: 100%;
@@ -47,16 +49,56 @@
 
 .home-rightSide {
     gap: 4rem;
+    position: relative;
 }
-    .home-youtube {
+    #home-youtube {
         width: 20rem;
         height: 14rem;
-        background-color: gray;
+        background-color: black;
     }
 
     .home-copang {
+        width: 80%;
+        position: relative;
+    }
+    .home-rightSide.doom-selected .home-copang {
+        position:absolute;
+        bottom: 2rem;
         width: 80%;
     }
     .home-copang > img {
         width: 100%;
     }
+
+.home-btn {
+    width: 40px;
+    height: 40px;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+}
+
+.mr-X {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    background-color: rgba(128, 128, 128, 0.504);
+    width: 1.3rem;
+    height: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+    .mr-X:hover {
+        background-color: rgba(128, 128, 128, 0.822);
+    }
+
+#home-doom {
+    position: fixed;
+    transform: scale(0.45);
+    top: -4rem;
+    overflow: hidden;
+    width: 45rem;
+    height: 30rem;
+}
