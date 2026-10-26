@@ -18,8 +18,8 @@
     </div>
     <h1>유튜브와 둠 중 원하는 것을 고르시오</h1>
     <form>
-        <button id="youtubeBtn"><img src="/SelectPage/YouTube.png" alt="유튜브" height="500px" width="350px"></button>
-        <button id="doomBtn"><img src="/SelectPage/Doom.png" alt="둠" height="500px" width="350px"></button>
+        <button type="button" id="youtubeBtn"><img src="/SelectPage/YouTube.png" alt="유튜브" height="500px" width="350px"></button>
+        <button type="button" id="doomBtn"><img src="/SelectPage/Doom.png" alt="둠" height="500px" width="350px"></button>
     </form>
     <script>
         const youtubeBtn = document.querySelector('#youtubeBtn');
@@ -47,11 +47,13 @@
             localStorage.setItem('Selected', "doom");
             youtubeBtn.style.border = "1px solid black";
             doomBtn.style.border = "2px solid red";
+            window.location.href = "../index.html";
         }
         function SeletY(){
             localStorage.setItem('Selected', "youtube");
             youtubeBtn.style.border = "2px solid red";
             doomBtn.style.border = "1px solid black";
+            window.location.href = "../index.html";
         }
     </script>
 </body>

@@ -57,7 +57,7 @@ form.addEventListener('submit', (event) => {
   window.dispatchEvent(new CustomEvent('siteConfigChanged', {
     detail: { contentLink, isAbsolute }
   }));
-
+  returnToMain();
 });
 
 loadSavedSettings();
