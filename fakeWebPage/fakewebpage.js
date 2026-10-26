@@ -1,8 +1,6 @@
 // 가짜 웹사이트 설정 페이지 - 순수 JavaScript (React 사용 안 함)
 // 팀원과 약속한 저장 키: contentLink (문자열), isAbsolute ('true' / 'false')
-// 메인 화면에 돌아가려면 MAIN_PAGE에 팀원 메인 파일명을 적으세요. (예: 'index.html')
-// 아직 다른 페이지가 없다면 빈 문자열로 두면 저장 후 이 화면에 머뭅니다.
-const MAIN_PAGE = '';
+const MAIN_PAGE = '../index.html';
 
 const form = document.querySelector('#content-edit-form');
 const input = document.querySelector('#Content-input');
@@ -30,7 +28,7 @@ function normalizeWebsiteAddress(rawAddress) {
 }
 
 function returnToMain() {
-  if (MAIN_PAGE) window.location.href = MAIN_PAGE;
+  window.location.href = MAIN_PAGE;
 }
 
 form.addEventListener('submit', (event) => {
