@@ -131,3 +131,7 @@ iframe {
 body {
     overflow: hidden;
 }
+
+.iframeBox {
+    overflow: hidden;
+}
