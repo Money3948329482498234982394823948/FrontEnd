@@ -58,7 +58,6 @@ form.addEventListener('submit', (event) => {
     detail: { contentLink, isAbsolute }
   }));
 
-  returnToMain();
 });
 
 loadSavedSettings();
