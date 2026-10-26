@@ -64,7 +64,7 @@
         const mainIframe = document.querySelector('#home-mainIframe');
         const homeSides = document.querySelectorAll('.home-side');
 
-        let youtubeHide = false;
+        let sideFramesHidden = false;
 
         if(Selected === "doom") {
             rightSide.classList.add('doom-selected');
@@ -103,18 +103,11 @@
 
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
-                if(youtubeHide) {
-                    youtubeFrame.style.display = "inline-block";
-                    doomFrame.style.display = "inline-block";
-                    youtubeHide = false;
-                }
-                else {
-                    youtubeFrame.style.display = "none";
-                    doomFrame.style.display = "none";
-                    youtubeHide = true;
-                }
+                sideFramesHidden = !sideFramesHidden;
+                doomFrame.style.display = !sideFramesHidden && Selected === 'doom' ? 'inline-block' : 'none';
+                youtubeFrame.style.display = !sideFramesHidden && Selected !== 'doom' && ytLink ? 'inline-block' : 'none';
             }
-        })
+        });
     </script>
 </body>
 </html>
