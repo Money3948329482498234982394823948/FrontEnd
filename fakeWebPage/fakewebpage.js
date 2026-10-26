@@ -1,7 +1,5 @@
 // 가짜 웹사이트 설정 페이지 - 순수 JavaScript (React 사용 안 함)
 // 팀원과 약속한 저장 키: contentLink (문자열), isAbsolute ('true' / 'false')
-const MAIN_PAGE = '../index.html';
-
 const form = document.querySelector('#content-edit-form');
 const input = document.querySelector('#Content-input');
 const checkbox = document.querySelector('#absoluteCheck');
@@ -25,10 +23,6 @@ function normalizeWebsiteAddress(rawAddress) {
   } catch {
     return null;
   }
-}
-
-function returnToMain() {
-  window.location.href = MAIN_PAGE;
 }
 
 form.addEventListener('submit', (event) => {
@@ -57,7 +51,6 @@ form.addEventListener('submit', (event) => {
   window.dispatchEvent(new CustomEvent('siteConfigChanged', {
     detail: { contentLink, isAbsolute }
   }));
-  returnToMain();
 });
 
 loadSavedSettings();
