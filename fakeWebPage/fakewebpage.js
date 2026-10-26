@@ -4,6 +4,36 @@ const form = document.querySelector('#content-edit-form');
 const input = document.querySelector('#Content-input');
 const checkbox = document.querySelector('#absoluteCheck');
 const message = document.querySelector('#content-edit-message');
+const recent = document.querySelector('#content-edit-recent');
+
+const RECENT_MAX = 5;
+
+// 최근 저장한 주소 목록 (저장 키: contentRecent)
+function loadRecent() {
+  return JSON.parse(localStorage.getItem('contentRecent')) || [];
+}
+
+// 목록을 그린다. 주소를 클릭하면 그 주소로 다시 저장
+function showRecent() {
+  recent.innerHTML = '';
+  loadRecent().forEach((link) => {
+    const li = document.createElement('li');
+    li.textContent = link;
+    li.addEventListener('click', () => {
+      input.value = link;
+      form.requestSubmit();
+    });
+    recent.appendChild(li);
+  });
+}
+
+// 맨 앞에 추가하고, 같은 주소는 중복 제거, 최대 5개까지 저장
+function addRecent(link) {
+  const list = loadRecent().filter((item) => item !== link);
+  list.unshift(link);
+  localStorage.setItem('contentRecent', JSON.stringify(list.slice(0, RECENT_MAX)));
+  showRecent();
+}
 
 function loadSavedSettings() {
   input.value = localStorage.getItem('contentLink') || '';
@@ -46,6 +76,7 @@ form.addEventListener('submit', (event) => {
   localStorage.setItem('isAbsolute', String(isAbsolute));
   input.value = contentLink;
   message.textContent = '설정이 저장되었습니다.';
+  addRecent(contentLink);
 
   // 같은 창의 다른 코드에서도 값 변경을 구독할 수 있는 이벤트입니다.
   window.dispatchEvent(new CustomEvent('siteConfigChanged', {
@@ -54,3 +85,4 @@ form.addEventListener('submit', (event) => {
 });
 
 loadSavedSettings();
+showRecent();

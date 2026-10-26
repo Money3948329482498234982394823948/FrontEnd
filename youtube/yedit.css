@@ -53,6 +53,28 @@ body {
     cursor: pointer;
 }
 
+/* 최근 링크 목록 */
+.yedit-recent {
+    width: 530px;
+    margin-top: 24px;
+    list-style: none;
+}
+
+.yedit-recent li {
+    padding: 6px 4px;
+    border-bottom: 1px solid #eee;
+    font-size: 14px;
+    color: #555;
+    cursor: pointer;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.yedit-recent li:hover {
+    background: #f5f5f5;
+}
+
 .aBox {
     position: fixed;
     top: 0px;
