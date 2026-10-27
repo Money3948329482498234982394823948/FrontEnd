@@ -13,13 +13,13 @@
 
         <div class="home-leftSide home-side">
             <div class="home-ajdBox">
-                <img src="img/ajd.png">
-                <div class="mr-X">X</div>
+                <img id="img1" src="img/ajd.png">
+                <div class="mr-X" onclick="X1()">X</div>
             </div>  
 
             <div class="home-churchBox">
-                <img src="img/church.png">
-                <div class="mr-X">X</div>
+                <img id="img2" src="img/church.png">
+                <div class="mr-X" onclick="X2()">X</div>
             </div>
         </div>
         <div class="home-main">
@@ -46,13 +46,25 @@
             </iframe>
             
             <div class="home-copang">
-                <img src="img/copang.png">
-                <div class="mr-X">X</div>
+                <img id="img3" src="/img/copang.png">
+                <button class="mr-X" onclick="X3()">x</button>
             </div>
         </div>
     </div>
 
     <script>
+        function X1(){
+            var img1 = document.getElementById('img1')
+            img1.src = "img/광고.png";
+        }
+        function X2(){
+            var img2 = document.getElementById('img2')
+            img2.src = "img/광고.png";
+        }
+        function X3(){
+            var img3 = document.getElementById('img3')
+            img3.src = "img/광고.png";
+        }
         const Selected = localStorage.getItem('Selected');
         const contentLink = localStorage.getItem('contentLink');
         const isAbsolute = localStorage.getItem('isAbsolute');
@@ -108,6 +120,8 @@
                 activeFrame.classList.toggle('iframe-covered', sideFrameCovered);
             }
         });
+
+        
     </script>
 </body>
 </html>
