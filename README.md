@@ -5,13 +5,13 @@
 ## 파일
 - `fakewebpage.html`: 화면 구성
 - `fakewebpage.css`: 화면 스타일
-- `fakewebpage.js`: 주소 검사, 저장, 취소, 설정 불러오기
+- `fakewebpage.js`: 주소 검사, 저장, 최근 주소 목록, 설정 불러오기
 
 `fakewebpage.html`을 열어 시험할 수 있습니다. GitHub Pages 또는 로컬 서버를 통해 같은 출처에서 실행하면 다른 팀원 페이지와 `localStorage` 값을 공유할 수 있습니다.
 
 ## 메인 페이지 연결
 메인 페이지에서 `<a href="fakewebpage.html">가짜 웹사이트 설정</a>` 링크를 걸면 됩니다.
-`fakewebpage.js`의 맨 위 `const MAIN_PAGE = '';`를 `const MAIN_PAGE = 'index.html';`로 변경하면 저장/취소 후 메인 페이지로 돌아갑니다. 메인 페이지 파일명이 다르면 해당 파일명으로 변경하세요.
+`fakewebpage.js`의 맨 위 `const MAIN_PAGE = '';`를 `const MAIN_PAGE = 'index.html';`로 변경하면 저장 후 메인 페이지로 돌아갑니다. 메인 페이지 파일명이 다르면 해당 파일명으로 변경하세요.
 
 ## 팀원이 값을 받는 방법 (메인 페이지 JS)
 ```js
