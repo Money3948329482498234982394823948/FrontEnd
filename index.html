@@ -111,12 +111,10 @@
 
         function X1(){
             const img1 = document.getElementById("img1");
-            if(img1.getAttribute("src") === "img/광고.png"){
+            if(img1.getAttribute("src") !== "img/광고.png"){
                 img1.src = "img/광고.png";
             }else{
                 img1.src = "img/ajd.png";
-            }else{
-                img1.src = "img/광고.png";
             }
         }
         function X2(){
@@ -129,12 +127,10 @@
         }
         function X3(){
             const img3 = document.getElementById("img3");
-            if(img3.getAttribute("src") === "img/광고.png"){
+            if(img3.getAttribute("src") !== "img/광고.png"){
                 img3.src = "img/광고.png";
             }else{
                 img3.src = "img/copang.png";
-            }else{
-                img3.src = "img/광고.png";
             }
         }
 
