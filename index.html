@@ -13,13 +13,13 @@
 
         <div class="home-leftSide home-side">
             <div class="home-ajdBox">
-                <img src="img/ajd.png">
-                <div class="mr-X">X</div>
+                <img id="img1" src="img/ajd.png">
+                <button onclick="X1" class="mr-X">X</button>
             </div>  
 
             <div class="home-churchBox">
-                <img src="img/church.png">
-                <div class="mr-X">X</div>
+                <img id="img2" src="img/church.png">
+                <button onclick="X2" class="mr-X">X</button>
             </div>
         </div>
         <div class="home-main">
@@ -46,8 +46,8 @@
             </iframe>
             
             <div class="home-copang">
-                <img src="img/copang.png">
-                <div class="mr-X">X</div>
+                <img id="img3" src="img/copang.png">
+                <button onclick="X3" class="mr-X">X</button>
             </div>
         </div>
     </div>
@@ -108,6 +108,19 @@
                 activeFrame.classList.toggle('iframe-covered', sideFrameCovered);
             }
         });
+
+        function X1(){
+            const img1 = document.getElementById("img1");
+            img1.src = "./img/광고.png";
+        }
+        function X2(){
+            const img2 = document.getElementById("img2");
+            img2.src = "./img/광고.png";
+        }
+        function X3(){
+            const img3 = document.getElementById("img3");
+            img3.src = "./img/광고.png";
+        }
     </script>
 </body>
 </html>
