@@ -64,6 +64,8 @@
         const mainIframe = document.querySelector('#home-mainIframe');
         const homeSides = document.querySelectorAll('.home-side');
 
+        const XBU = document.querySelector('#mr-X');
+
         let sideFrameCovered = false;
 
         if(Selected === "doom") {
@@ -112,24 +114,30 @@
             const img1 = document.getElementById("img1");
             if(img1.getAttribute("src") !== "img/광고.png"){
                 img1.src = "img/광고.png";
+                XBU.style.display = "none";
             }else{
                 img1.src = "img/ajd.png";
+                XBU.style.display = "flex";
             }
         }
         function X2(){
             const img2 = document.getElementById("img2");
             if(img2.getAttribute("src") !== "img/광고.png"){
                 img2.src = "img/광고.png";
+                XBU.style.display = "none";
             }else{
                 img2.src = "img/church.png";
+                XBU.style.display = "flex";
             }
         }
         function X3(){
             const img3 = document.getElementById("img3");
             if(img3.getAttribute("src") !== "img/광고.png"){
                 img3.src = "img/광고.png";
+                XBU.style.display = "none";
             }else{
                 img3.src = "img/copang.png";
+                XBU.style.display = "flex";
             }
         }
     </script>
